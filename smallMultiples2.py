@@ -3,6 +3,10 @@ import pandas as pd
 
 seattle_weather=pd.read_csv("seattle_weather.csv")
 austin_weather=pd.read_csv("austin_weather.csv")
+
+seattle_weather["MONTH"] = seattle_weather["MONTH"].astype(str)
+austin_weather["MONTH"] = austin_weather["MONTH"].astype(str)
+
 # Create a figure and an array of axes: 2 rows, 1 column with shared y axis
 fig, ax = plt.subplots(2, 1, sharey=True)
 

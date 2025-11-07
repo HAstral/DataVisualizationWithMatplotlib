@@ -3,6 +3,10 @@ import pandas as pd
 
 seattle_weather=pd.read_csv("seattle_weather.csv")
 austin_weather=pd.read_csv("austin_weather.csv")
+
+seattle_weather["MONTH"] = seattle_weather["MONTH"].astype(str)
+austin_weather["MONTH"] = austin_weather["MONTH"].astype(str)
+
 fig, ax = plt.subplots()
 
 # Plot Seattle data, setting data appearance
